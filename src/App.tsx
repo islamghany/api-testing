@@ -1,6 +1,32 @@
 import React from 'react';
+import styled,{ThemeProvider} from 'styled-components'
+import {theme} from './utils/theme'
+import GlobalStyle from './utils/globalStyle';
 
+const ButtonComp = styled.button`
+  padding:1rem 2rem;
+  background:${({theme})=>theme.colors.primary[1]};
+  color:${({theme})=>theme.colors.light[4]};
+  border:none;
+  border-radius:.4rem;
+  cursor: pointer;
+  outline:none;
+  transition:background .3s ease;
+  margin:1rem;
+  font-size:1.6rem;
+  &:hover{
+   background:${({theme})=>theme.colors.primary[0]};
+  }
+  &:active{
+    background:${({theme})=>theme.colors.primary[1]};
+  }
+`
 
+const Button:React.FC = ({children})=>{
+  return <ButtonComp>
+   {children}
+  </ButtonComp>
+}
 function App() {
   const checkFetch= async  ()=>{
     try{
@@ -12,11 +38,14 @@ function App() {
     }
   }
   return (
+    <ThemeProvider theme={theme}>
+      <GlobalStyle />
     <div className="App">
-      <button onClick={checkFetch}>
+      <Button>
         check
-      </button>
+      </Button>
     </div>
+    </ThemeProvider>
   );
 }
 
