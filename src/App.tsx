@@ -42,7 +42,7 @@ function App() {
       <GlobalStyle />
     <div className="App">
       <Button>
-        check
+        check for localhost
       </Button>
     </div>
     </ThemeProvider>
