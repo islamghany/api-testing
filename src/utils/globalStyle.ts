@@ -1,4 +1,5 @@
 import {createGlobalStyle} from 'styled-components';
+
 export default createGlobalStyle`
     *,
     *::before,
@@ -12,7 +13,7 @@ export default createGlobalStyle`
 		@media (max-width:  56.25em){
 			font-size: 50%;
 		}
-		@media (max-width: : 75em){
+		@media (max-width:75em){
 			 font-size: 56.25%;
 		}
 		@media (min-width:112.5em){
@@ -22,7 +23,7 @@ export default createGlobalStyle`
 	body{
 		color: ${({theme})=>theme.colors.dark[0]};
 		font-size:1.6rem;
-		background: ${({theme})=>theme.colors.light[4]};
+		background: ${({theme})=>theme.colors.dark[1]};
 		font-family: -apple-system, BlinkMacSystemFont, Avenir, Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 	}
 `
