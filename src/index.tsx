@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import 'rsuite/lib/styles/index.less';
+import 'rsuite/dist/styles/rsuite-default.css';
 
 ReactDOM.render(
   <React.StrictMode>

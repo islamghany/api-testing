@@ -11,15 +11,19 @@ const ButtonComp = styled(Button)`
   border:none;
   border-radius:.4rem;
   cursor: pointer;
-  outline:none;
   transition:background .3s ease;
   margin:1rem;
   font-size:1.6rem;
   &:hover{
-   background:${({theme})=>theme.colors.primary[0]};
+   background:${({theme})=>theme.colors.primary[0]} !important;
+   color:${({theme})=>theme.colors.light[4]} !important;
   }
   &:active{
-    background:${({theme})=>theme.colors.primary[1]};
+    background:${({theme})=>theme.colors.primary[1]} !important;
+  }
+  &:focus{
+    background:${({theme})=>theme.colors.primary[1]} !important;
+     color:${({theme})=>theme.colors.light[4]} !important;
   }
 `
 
